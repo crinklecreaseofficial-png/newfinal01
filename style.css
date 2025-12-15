@@ -10,7 +10,7 @@
   --chat-bg: radial-gradient(circle at top, #d9f0ff 0%, #fbe5ff 50%, #f7f8ff 100%);
   --bubble-me: linear-gradient(135deg, #7fc9ff, #ff7fbf);
   --bubble-them: rgba(255, 255, 255, 0.96);
-  --shadow-soft: 0 10px 24px rgba(41, 60, 122, 0.18);
+  --shadow-soft: 0 6px 18px rgba(41, 60, 122, 0.18);
 }
 
 /* LIGHT THEME (WhatsApp‑ish) */
@@ -52,7 +52,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text-main);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* App shell */
@@ -251,7 +251,7 @@ body {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .edit-profile-btn {
@@ -330,7 +330,7 @@ body {
 
 .message-bubble {
   max-width: 76%;
-  padding: 9px 11px;
+  padding: 8px 10px;
   border-radius: 20px;
   font-size: 13px;
   line-height: 1.5;
@@ -715,6 +715,30 @@ body {
 
 /* Responsive */
 
+@media (max-width: 900px) {
+  .app {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .sidebar-header {
+    padding: 10px 12px;
+  }
+
+  .app-title {
+    font-size: 16px;
+  }
+
+  .message-bubble {
+    max-width: 82%;
+    font-size: 12px;
+  }
+
+  #message-input {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 780px) {
   body {
     height: 100vh;
@@ -729,6 +753,7 @@ body {
 
   .sidebar {
     width: 100%;
+    min-width: 0;
   }
 
   .chat-container {
